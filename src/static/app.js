@@ -51,7 +51,9 @@ document.addEventListener("DOMContentLoaded", () => {
               );
 
               if (response.ok) {
-                fetchActivities();
+                fetchActivities();                pytest tests/                 # Run all tests
+                pytest tests/ -v             # Verbose output
+                pytest tests/ --cov          # With coverage report
               } else {
                 const result = await response.json();
                 console.error("Error:", result.detail);
